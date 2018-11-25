@@ -608,6 +608,9 @@ _EOF_
         outputn "Bridge looks like a layer 2 bridge, get the domain's IP address from your DHCP server"
         IP="<IP address>"
     fi
+    
+    # add hosts to be able to ssh by hostname
+    echo "${VNAME}\ ${IP}" >> /etc/hosts
 
     printf "\n"
     output "SSH to ${VMNAME}: 'ssh ${LOGIN_USER}@${IP}' or 'ssh ${LOGIN_USER}@${VMNAME}'"
