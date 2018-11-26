@@ -610,7 +610,7 @@ _EOF_
     fi
     
     # add hosts to be able to ssh by hostname
-    echo "${VNAME}\ ${IP}" >> /etc/hosts
+    echo "${VMNAME}\ ${IP}" >> /etc/hosts
 
     printf "\n"
     output "SSH to ${VMNAME}: 'ssh ${LOGIN_USER}@${IP}' or 'ssh ${LOGIN_USER}@${VMNAME}'"
